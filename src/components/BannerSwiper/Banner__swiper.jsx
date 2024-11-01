@@ -27,7 +27,7 @@ const BannerSwiper = () => {
       <Banner imgSrc={image} />
     </SwiperSlide>
   ));
-  console.log("banner");
+
   return (
     <div className={S.banner__swiper__container} aria-label="광고 배너">
       <Swiper {...SWIPER__OPTIONS}>{swiperSlide}</Swiper>
