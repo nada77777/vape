@@ -3,8 +3,8 @@ import S from "./Banner.module.scss";
 
 const Banner = ({ imgSrc }) => {
   return (
-    <div>
-      <img src={imgSrc} alt="배너 이미지" />
+    <div className={S.banner__image__container}>
+      <img className={S.banner__image} src={imgSrc} alt="배너 이미지" />
     </div>
   );
 };
