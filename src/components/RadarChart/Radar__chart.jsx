@@ -12,7 +12,7 @@ Chart.register(RadialLinearScale, PointElement, LineElement, Filler);
 
 const RadarChart = ({ item }) => {
   const { darkMode } = useDarkModeContext();
-  console.log("item", item);
+
   const { flavors, levels } = extractFlavorData(item);
 
   const data = {
