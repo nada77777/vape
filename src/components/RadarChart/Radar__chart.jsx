@@ -28,8 +28,10 @@ const RadarChart = ({ item }) => {
       },
     ],
   };
+
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       r: {
         ticks: {
