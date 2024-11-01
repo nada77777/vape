@@ -15,7 +15,7 @@ import S from "./Header.module.scss";
 const Header = () => {
   //useRef로 나중에 바꿔?
   const [isOpen, setIsOpen] = useState({ menu: false, search: false });
-  console.log("header", "header");
+
   const navigate = useNavigate();
 
   const handleToggle = (e) => {
