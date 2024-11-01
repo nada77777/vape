@@ -1,0 +1,100 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.item {
+  // 나중에 재검
+  box-sizing: border-box;
+  border: $border-gray;
+  border-radius: $radius-6;
+  display: block;
+  width: 200px;
+  height: 250px;
+  box-shadow: $box-shadow;
+  cursor: pointer;
+  transition: border 250ms ease-in;
+
+  &:hover {
+    border: 1px solid $main-color-1;
+  }
+
+  a {
+    @include flexbox(column, null, center, null);
+    text-decoration: none;
+    padding: $spacing-16;
+    height: 100%;
+  }
+
+  .description {
+    @include flexbox(row, space-between, center, $spacing-16);
+    width: 100%;
+    padding-top: $spacing-32;
+
+    .title {
+      width: 80%;
+      color: $black;
+      font-size: $text-12;
+      font-weight: $weight-600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--text-color);
+    }
+
+    .button {
+      @include flexbox(flex, center, center, null);
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: $main-color-1;
+      border-radius: $radius-half;
+      color: $white;
+      font-size: $text-16;
+      padding: 0;
+    }
+  }
+}
+
+@include mq(tablet) {
+  .item {
+    width: 150px;
+    height: 190px;
+
+    .description {
+      gap: $spacing-4;
+      padding-top: $spacing-16;
+    }
+  }
+}
+
+@include mq(mobile) {
+  .item {
+    width: 140px;
+    height: 180px;
+
+    a {
+      padding: $spacing-8;
+      height: 100%;
+    }
+
+    .item__image__container {
+      border-radius: 6px;
+      width: 100px;
+      border: $border-gray;
+      overflow: hidden;
+    }
+
+    .description {
+      gap: $spacing-4;
+      padding-top: $spacing-28;
+
+      .title {
+        font-size: $text-10;
+        font-weight: $weight-600;
+      }
+
+      .button {
+        width: 1rem;
+        height: 1rem;
+        font-size: $text-10;
+      }
+    }
+  }
+}

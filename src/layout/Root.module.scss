@@ -1,0 +1,51 @@
+@use "@/styles/utils/_index.scss" as *;
+
+body {
+  position: relative;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.root {
+  max-width: 1024px;
+  min-height: 100vh;
+  margin: auto;
+  overflow: hidden;
+}
+
+.darkMode__button {
+  @include flexbox(row, center, center, null);
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  padding: $spacing-12;
+  border: 3px solid $gray-400;
+  border-radius: $radius-half;
+  font-size: $text-24;
+  color: yellow;
+  background-color: $gray-300;
+  z-index: 999;
+
+  &:hover {
+    color: yellow;
+    border: 3px solid $gray-300;
+    background-color: $gray-400;
+  }
+}
+
+@include mq(tablet) {
+  .root {
+    max-width: 768px;
+  }
+}
+
+@include mq(mobile) {
+  .root {
+    max-width: 480px;
+  }
+
+  .darkMode__button {
+    padding: $spacing-8;
+    font-size: $text-22;
+  }
+}

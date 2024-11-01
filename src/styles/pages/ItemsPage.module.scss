@@ -1,0 +1,50 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.title__container {
+  text-align: center;
+  font-weight: $weight-600;
+  padding: $spacing-48;
+  h1 {
+    font-size: $text-32;
+    color: $black;
+    padding: $spacing-8 0;
+    color: var(--text-color);
+  }
+  p {
+    color: $gray-400;
+  }
+}
+
+.category__button {
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid $gray-300;
+  font-weight: $weight-600;
+  color: $gray-300;
+
+  &:hover,
+  &.active {
+    border-bottom: 3px solid $main-color-1;
+    color: var(--text-color);
+  }
+}
+
+.swiper__container {
+  width: 100%;
+  padding: $spacing-16 $spacing-14;
+}
+
+// 모바일
+@include mq(mobile) {
+  .title__container {
+    font-weight: $weight-600;
+    padding: $spacing-32;
+    h1 {
+      font-size: $text-21;
+      padding: $spacing-8 0;
+    }
+    p {
+      font-size: $text-16;
+    }
+  }
+}

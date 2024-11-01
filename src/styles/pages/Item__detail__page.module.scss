@@ -1,0 +1,259 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.flavorItemDetail {
+  display: flex;
+
+  .item__info {
+    width: 60%;
+    padding: $spacing-48;
+    .name {
+      font-size: $text-32;
+      font-weight: $weight-600;
+      text-align: center;
+      padding: $spacing-32 0;
+    }
+
+    .description__container {
+      @include flexbox(row, center, center, null);
+      background-color: $gray-100;
+      border: $border-gray;
+      max-width: 500px;
+      min-height: 120px;
+      text-align: center;
+      border-radius: $radius-6;
+      margin-bottom: $spacing-32;
+      padding: $spacing-16;
+      color: $black;
+    }
+  }
+
+  .image__container {
+    @include flexbox(row, center, center, null);
+    width: 40%;
+
+    .image__container__inner {
+      border-radius: 6px;
+      width: 80%;
+      border: 2px solid #ccc;
+      overflow: hidden;
+    }
+  }
+}
+
+.pg__ml__flavor {
+  @include flexbox(row, null, center, $spacing-16);
+
+  .pg__vg,
+  .capacity {
+    font-size: $text-12;
+    font-weight: $weight-600;
+  }
+
+  .flavor__list {
+    @include flexbox(row, null, null, $spacing-8);
+  }
+
+  .flavor__item {
+    width: 70px;
+    height: 70px;
+    border: $border-basic;
+    border-color: var(--text-color);
+    padding: $spacing-8;
+    text-align: center;
+    border-radius: $radius-6;
+    overflow: hidden;
+  }
+
+  .flavor__item__current {
+    position: relative;
+    border: 2px solid $main-color-1;
+    font-weight: $weight-600;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $black-opacity;
+    }
+  }
+}
+
+.flavor__data__container {
+  @include flexbox(row, space-between, null, null);
+  background-color: var(--gray-100);
+  padding: $spacing-16;
+}
+
+.left {
+  @include flexbox(row, center, center, null);
+  width: 40%;
+}
+
+.banner__bottom__container {
+  @include flexbox(row, null, null, $spacing-48);
+  margin-top: $spacing-48;
+  overflow: hidden;
+}
+
+.bookmark__button {
+  display: inline-block;
+  border: 2px solid $white;
+  padding: $spacing-10 $spacing-20;
+  background: repeating-linear-gradient(45deg, #9b59b6, #9b59b6 10px, #8e44ad 10px, #8e44ad 20px);
+  color: $white;
+  font-size: $text-16;
+  font-weight: bold;
+  text-align: center;
+  border-radius: $radius-10;
+  box-shadow: 0px 4px 10px rgb(85 78 78 / 44%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bookmark__button:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bookmark__button:active {
+  transform: scale(0.95);
+}
+
+.image__container {
+  position: relative;
+}
+
+@include mq(tablet) {
+  .flavorItemDetail {
+    display: flex;
+
+    .item__info {
+      width: 60%;
+      padding: $spacing-12;
+      .name {
+        font-size: $text-32;
+        padding: $spacing-16 0;
+      }
+
+      .description__container {
+      }
+    }
+
+    .image__container {
+      .image__container__inner {
+        width: 90%;
+      }
+    }
+  }
+
+  .pg__ml__flavor {
+    @include flexbox(column, null, flex-start, $spacing-8);
+    margin-bottom: $spacing-16;
+
+    .pg__vg,
+    .capacity {
+      font-size: $text-12;
+      font-weight: $weight-600;
+    }
+
+    .flavor__list {
+      @include flexbox(row, null, null, $spacing-8);
+    }
+
+    .flavor__item {
+      width: 60px;
+      height: 60px;
+    }
+
+    .flavor__item__current {
+    }
+  }
+
+  .flavor__data__container {
+    @include flexbox(row, space-around, null, null);
+    background-color: var(--gray-100);
+    padding: $spacing-16;
+  }
+
+  .left {
+    @include flexbox(row, center, center, null);
+    width: 40%;
+  }
+
+  .bookmark__button {
+    display: inline-block;
+    border: 2px solid $white;
+    padding: $spacing-10 $spacing-20;
+    background: repeating-linear-gradient(45deg, #9b59b6, #9b59b6 10px, #8e44ad 10px, #8e44ad 20px);
+    color: $white;
+    font-size: $text-16;
+    font-weight: bold;
+    text-align: center;
+    border-radius: $radius-10;
+    box-shadow: 0px 4px 10px rgb(85 78 78 / 44%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+}
+@include mq(mobile) {
+  .flavorItemDetail {
+    @include flexbox(column-reverse, null, center, null);
+    margin-top: $spacing-24;
+
+    .item__info {
+      width: 100%;
+      padding: $spacing-8;
+      .name {
+        font-size: $text-22;
+        padding: $spacing-20 0;
+      }
+
+      .description__container {
+        margin-bottom: $spacing-20;
+        padding: $spacing-16;
+      }
+    }
+
+    .image__container__inner {
+      border-radius: 6px;
+      overflow: hidden;
+      width: 150px;
+    }
+  }
+
+  .pg__ml__flavor {
+    @include flexbox(row, null, center, $spacing-16);
+    margin-bottom: $spacing-16;
+    .pg__vg,
+    .capacity {
+      font-size: $text-12;
+      font-weight: $weight-600;
+    }
+
+    .flavor__list {
+      @include flexbox(row, null, null, $spacing-8);
+    }
+
+    .flavor__item {
+      width: 60px;
+      height: 60px;
+      padding: $spacing-8;
+    }
+  }
+
+  .flavor__data__container {
+    @include flexbox(column, null, center, null);
+    padding: $spacing-16;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .bookmark__button {
+    float: right;
+  }
+}

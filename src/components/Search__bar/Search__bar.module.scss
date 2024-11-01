@@ -1,0 +1,53 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.form {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -999;
+  &.show {
+    opacity: 1;
+    z-index: 999;
+  }
+
+  input {
+    outline: none;
+    border: $border-basic;
+    border-radius: $radius-24;
+    padding: $spacing-16 5%;
+    width: 100%;
+  }
+
+  button {
+    @include flexbox(row, center, center, null);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: $text-32;
+    color: $gray-400;
+
+    &:last-child {
+      right: 1%;
+    }
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+@include mq(mobile) {
+  .form {
+    input {
+      padding: $spacing-10 7%;
+    }
+
+    button {
+      &:last-child {
+        right: 2%;
+      }
+    }
+  }
+}

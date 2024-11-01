@@ -1,0 +1,21 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.nothing__result {
+  text-align: center;
+
+  h1 {
+    font-size: $text-24;
+    padding: $spacing-48;
+  }
+
+  div {
+    font-size: $text-112;
+    color: $gray-300;
+  }
+}
+
+h1 {
+  font-size: $text-24;
+  font-weight: $weight-600;
+  padding: $spacing-8 0;
+}

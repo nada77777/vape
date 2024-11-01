@@ -1,0 +1,28 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.section {
+  text-align: center;
+  padding: $spacing-16 0;
+
+  .title {
+    font-size: $text-12;
+    font-weight: $weight-600;
+    padding: $spacing-20 0;
+  }
+
+  .loading {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border: 5px solid $main-color-1;
+    border-top: 5px solid transparent;
+    border-radius: $radius-half;
+    animation: spin linear 1.5s infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

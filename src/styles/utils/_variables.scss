@@ -1,0 +1,97 @@
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #121212;
+  --main-color-1: #965b9d;
+  --main-color-2: #fdc43f;
+}
+
+// Base Font Family
+$base-font-family: "Pretendard";
+
+// Colors
+$main-color-1: #965b9d;
+$main-color-2: #fdc43f;
+
+$white: #ffffff;
+$black: #222222;
+$blue: #3b6dff;
+$black-opacity: rgba(0, 0, 0, 0.3);
+
+$brand-dark-1: #191919;
+$brand-dark-2: #212121;
+
+$gray-100: #fafafa;
+$gray-200: #ebebeb;
+$gray-300: #ccc;
+$gray-400: #999999;
+
+// Text Size
+$text-4: 0.25rem;
+$text-8: 0.5rem;
+$text-10: 0.625rem;
+$text-12: 0.75rem;
+$text-16: 1rem;
+$text-21: 1.3125rem;
+$text-22: 1.375rem;
+$text-24: 1.5rem;
+$text-28: 1.75rem;
+$text-32: 2rem;
+$text-34: 2.125rem;
+$text-37: 2.375rem;
+$text-38: 2.375rem;
+$text-48: 3rem;
+$text-50: 3.125rem;
+$text-75: 4.6875rem;
+$text-112: 7rem;
+
+// Spacing
+$spacing-4: 0.25rem;
+$spacing-8: 0.5rem;
+$spacing-10: 0.625rem;
+$spacing-12: 0.75rem;
+$spacing-14: 0.875rem;
+$spacing-16: 1rem;
+$spacing-18: 1.125rem;
+$spacing-20: 1.25rem;
+$spacing-22: 1.375rem;
+$spacing-24: 1.5rem;
+$spacing-26: 1.625rem;
+$spacing-28: 1.75rem;
+$spacing-30: 1.875rem;
+$spacing-32: 2rem;
+$spacing-36: 2.25rem;
+$spacing-40: 2.5rem;
+$spacing-48: 3rem;
+$spacing-52: 3.25rem;
+$spacing-56: 3.5rem;
+$spacing-60: 3.75rem;
+$spacing-80: 5rem;
+$spacing-82: 5.125rem;
+$spacing-160: 10rem;
+
+// radius
+$radius-6: 0.375rem;
+$radius-10: 0.625rem;
+$radius-12: 0.75rem;
+$radius-16: 1rem;
+$radius-24: 1.5rem;
+$radius-32: 2rem;
+$radius-half: 50%;
+
+// font-weight
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;
+$weight-800: 800;
+
+// line-height
+$line-140: 1.4;
+$line-150: 1.5;
+$line-160: 1.6;
+
+//box-shadow
+$box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
+
+//border
+$border-basic: 1px solid black;
+$border-gray: 1px solid #ccc;

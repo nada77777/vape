@@ -1,0 +1,29 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.notice {
+  border: $border-basic;
+  border-color: var(--text-color);
+  border-radius: $radius-32;
+  padding: $spacing-8;
+  width: 50%;
+  text-align: center;
+  margin: $spacing-32 auto;
+}
+
+.notice__title {
+  font-size: $text-16;
+}
+
+@include mq(tablet) {
+  .notice {
+    width: 80%;
+    margin: $spacing-26 auto;
+  }
+}
+
+@include mq(mobile) {
+  .notice {
+    width: 80%;
+    margin: $spacing-24 auto;
+  }
+}

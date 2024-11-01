@@ -1,0 +1,21 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.flavorItmes {
+  @include flexbox(row, space-around, null, $spacing-16);
+  flex-wrap: wrap;
+
+  li {
+    border: $border-gray;
+    overflow: hidden;
+    border-radius: $radius-6;
+    box-shadow: $box-shadow;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    transition: border 250ms ease-in;
+
+    &:hover {
+      border: 1px solid $main-color-1;
+    }
+  }
+}

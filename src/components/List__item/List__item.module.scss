@@ -1,0 +1,70 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.List__item {
+  @include flexbox(row, space-between, null, null);
+  border-bottom: $border-gray;
+  padding: $spacing-16;
+
+  .image__container__inner {
+    width: 100px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  &:nth-child(1) {
+    border-top: $border-gray;
+  }
+
+  .List__item__info {
+    @include flexbox(row, null, center, $spacing-16);
+    width: 70%;
+    cursor: pointer;
+
+    .List__item__title {
+      font-weight: $weight-600;
+      padding: $spacing-8 0;
+    }
+
+    .List__item__pg,
+    .List__item__capacity {
+      font-size: $text-12;
+      font-weight: $weight-600;
+      margin-right: $spacing-8;
+    }
+  }
+
+  .delete__button {
+    @include flexbox(row, null, center, $spacing-8);
+    padding: $spacing-8;
+    font-weight: $weight-600;
+    color: $gray-400;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+@include mq(mobile) {
+  .List__item {
+    padding: $spacing-8;
+
+    .image__container__inner {
+      width: 80px;
+    }
+
+    .List__item__info {
+      gap: $spacing-12;
+      width: 60%;
+
+      .List__item__title {
+        font-size: $text-10;
+      }
+
+      .List__item__pg,
+      .List__item__capacity {
+        font-size: $text-10;
+      }
+    }
+  }
+}

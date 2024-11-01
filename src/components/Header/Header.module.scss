@@ -1,0 +1,126 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.header {
+  position: relative;
+  @include flexbox(row, space-between, center, null);
+
+  padding: $spacing-16 $spacing-14;
+  height: 100px;
+
+  .menu__button .icon,
+  .search__button .icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--text-color);
+  }
+
+  .header__title {
+    font-size: $text-48;
+    cursor: pointer;
+  }
+}
+
+.side__header {
+  position: absolute;
+  top: 0;
+  background-color: $white;
+  overflow: hidden;
+  right: 100%;
+  width: 40%;
+  height: 100vh;
+  border-top-right-radius: $radius-6;
+  border-bottom-right-radius: $radius-6;
+  margin-top: $spacing-32;
+  transition: transform 250ms ease-in;
+  z-index: 9999;
+  &.active {
+    transform: translateX(100%);
+  }
+
+  .side__header__lists {
+    li {
+      a {
+        @include flexbox(row, null, center, $spacing-16);
+        // display: flex;
+        // align-items: center;
+        // gap: $spacing-16;
+        font-weight: $weight-600;
+        color: $gray-400;
+        padding: $spacing-16;
+        cursor: pointer;
+        &:hover {
+          color: $main-color-2;
+        }
+      }
+
+      &:nth-child(1) {
+        background-color: $main-color-2;
+        text-align: end;
+        button {
+          padding: $spacing-16;
+          font-weight: $weight-600;
+          color: $gray-400;
+
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  position: absolute;
+  background-color: $black-opacity;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 999;
+}
+
+// 모바일
+@include mq(mobile) {
+  .header {
+    padding: $spacing-16 $spacing-14;
+    height: 50px;
+
+    .menu__button .icon,
+    .search__button .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .header__title {
+      font-size: $text-24;
+      cursor: pointer;
+    }
+  }
+
+  .side__header {
+    width: 50%;
+  }
+}
+
+@include mq(tablet) {
+  .header {
+    padding: $spacing-16 $spacing-14;
+    height: 70px;
+
+    .menu__button .icon,
+    .search__button .icon {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .header__title {
+      font-size: $text-32;
+    }
+  }
+
+  .side__header {
+    width: 50%;
+  }
+}

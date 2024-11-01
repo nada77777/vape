@@ -1,0 +1,21 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.block {
+  display: block;
+  img {
+    margin: auto;
+  }
+}
+
+.flex {
+  @include flexbox(row, null, center, $spacing-32);
+  img {
+    border-radius: $radius-6;
+  }
+}
+
+@include mq(mobile) {
+  .flex {
+    gap: $spacing-16;
+  }
+}

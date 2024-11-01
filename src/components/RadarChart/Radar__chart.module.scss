@@ -1,0 +1,11 @@
+@use "@/styles/utils/_index.scss" as *;
+
+.radar__container {
+  width: 100%;
+}
+
+@include mq(mobile) {
+  .radar__container {
+    width: 60%;
+  }
+}
